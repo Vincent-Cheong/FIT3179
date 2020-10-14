@@ -17,10 +17,6 @@
         "url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/2019.csv"
       },
 
-      "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"}
-      },
       "layer": [
         {
           "mark": {
