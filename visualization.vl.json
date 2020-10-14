@@ -18,7 +18,7 @@
       },
       "encoding": {
         "key": "Country or region",
-        "fields": "Score"
+        "fields": ["Score"]
       },
       "layer": [
         {
