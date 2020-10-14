@@ -14,7 +14,7 @@
     },
     {
       "data": {
-        "url": "https://github.com/Vincent-Cheong/FIT3179/blob/main/earthquake.csv"
+        "url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/earthquake.csv"
       },
       "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
