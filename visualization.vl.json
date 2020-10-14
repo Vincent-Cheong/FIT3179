@@ -14,11 +14,10 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/earthquake.csv"
+        "url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/2019.csv"
       },
       "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"}
+        "Country": {"field": "Country or region", "type": "quantitative"}
       },
       "layer": [
         {
