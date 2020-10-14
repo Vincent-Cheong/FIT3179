@@ -17,7 +17,8 @@
         "url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/2019.csv"
       },
       "encoding": {
-        "Country": {"field": "Country or region", "type": "quantitative"}
+        "key": "Country or region",
+        "fields": "Score"
       },
       "layer": [
         {
