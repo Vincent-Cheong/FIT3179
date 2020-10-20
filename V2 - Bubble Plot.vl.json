@@ -1,0 +1,66 @@
+{
+  "$schema"  : "https://vega.github.io/schema/vega-lite/v4.json",
+  "width"    : 500,
+  "height"   : 400,
+  "title"    : "Death and Recovered COVID-19 Cases per Country",
+  "data"     : {"url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Covid-19.csv"},
+
+  "params"   : [{"name" : "Continent_selection",
+                 "bind" : {"input"  : "select",
+                           "options": [null, "Africa", "Americas", "Eastern Mediterranean", "Europe", "South-East Asia", "Western Pacific"],
+                           "labels" : ["Show All", "Africa", "Americas", "Eastern Mediterranean", "Europe", "South-East Asia", "Western Pacific"],
+                           "name"   : "WHO Region:"}},
+
+                {"name" : "Population_Above",
+                 "value": 0,
+                 "bind" : {"input": "range", "min": 0, "max": 100000000, "step": 1000000, "name": "Population:"}}],
+
+  "transform": [{"filter": "datum['Death Cases'] > 0"},
+                {"filter": "datum['Recovered Cases'] > 0"},
+                {"filter": "datum['Population'] > Population_Above"},
+                {"filter": "Continent_selection == null || datum['WHO Region'] == Continent_selection"},
+
+                {"calculate": "datum['Confirmed Cases'] / datum['Population'] * 10000", "as": "Cases per 10000 Population"}],
+
+  "encoding" : {"x": {"field": "Death Cases", "type": "quantitative", "axis": {"tickCount": 7}, "scale": {"type": "log", "domain": [1, 10000000]}},
+
+                "y": {"field": "Recovered Cases", "type": "quantitative", "axis": {"tickCount": 6}, "scale": {"type": "log", "domain": [1, 10000000]}}},
+  
+  "layer"    : [{"selection": {"continent_highlight": {"type": "multi", "fields": ["WHO Region"], "bind": "legend"}},
+
+                 "mark"     : "circle",
+
+                 "encoding" : {"size" : {"field": "Population",
+                                         "type" : "quantitative",
+                                         "scale": {"type"  : "threshold", "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+                                                   "range" : [10, 50, 150, 200, 300, 400]}, "legend": {"format": ".1s"}},
+
+                               "color": {"field": "WHO Region",
+                                         "type" : "nominal",
+                                         "scale": {"domain": ["Africa", "Americas", "Eastern Mediterranean", "Europe", "South-East Asia", "Western Pacific"],
+                                                   "range" : ["#e41a1c", "#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628"]}},
+
+                               "opacity"  : {"condition": {"selection": "continent_highlight", "value": 0.6}, "value": 0.2},
+                
+                               "tooltip"  : [{"field": "Country" , "type": "nominal"},
+                                             {"field": "Confirmed Cases", "type": "quantitative", "format": ","},
+                                             {"field": "Active Cases"   , "type": "quantitative", "format": ","},
+                                             {"field": "Death Cases"    , "type": "quantitative", "format": ","},
+                                             {"field": "Recovered Cases", "type": "quantitative", "format": ","},
+                                             {"field": "Cases per 10000 Population", "type": "quantitative", "format": ".2f"}]}},
+
+                {"mark"    : {"type": "text", "align": "right", "baseline": "middle",
+                              "dx": -12, "fontSize" : 11.5, "fontStyle": "italic"},
+
+                 "encoding": {"text"   : {"field": "Country", "type": "nominal"},
+                              "color"  : {"value": "black"},
+                              "opacity": {"condition": {"test": "datum['Country'] == 'China' || datum['Country'] == 'Singapore' || datum['Country'] == 'Australia' || datum['Country'] == 'Italy' || datum['Country'] == 'Yemen' ||  datum['Country'] == 'United States'", "value": 1},
+                                          "value"    : 0},
+                              "tooltip": [{"field": "Country" , "type": "nominal"},
+                                          {"field": "Confirmed Cases", "type": "quantitative", "format": ","},
+                                          {"field": "Active Cases"   , "type": "quantitative", "format": ","},
+                                          {"field": "Death Cases"    , "type": "quantitative", "format": ","},
+                                          {"field": "Recovered Cases", "type": "quantitative", "format": ","},
+                                          {"field": "Cases per 10000 Population", "type": "quantitative", "format": ".2f"}]}}]
+
+}
