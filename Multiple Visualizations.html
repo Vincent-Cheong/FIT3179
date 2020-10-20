@@ -9,7 +9,7 @@
   <script src = "https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
   
   <!-- CSS file -->
-  <link rel = "stylesheet" type = "text/css" href = "css/styles.css" media = "all">
+  <link rel = "stylesheet" type = "text/css" href = "Styles.css" media = "all">
 </head>
 <body>
 
@@ -22,10 +22,10 @@
 <div id = "bubble_plot"></div>
 
 <script type = "text/javascript">
-  var vis1 = "js/V1 - Chloropleth Map.vl.json";
+  var vis1 = "V1 - Chloropleth Map.vl.json";
   vegaEmbed('#choropleth_map', vis1).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view}).catch(console.error);
   
-  var vis2 = "js/V2 - Bubble Plot.vl.json";
+  var vis2 = "V2 - Bubble Plot.vl.json";
   vegaEmbed('#bubble_plot', vis2).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view}).catch(console.error);
 </script>
   
