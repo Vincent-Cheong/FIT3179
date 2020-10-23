@@ -1,26 +1,27 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data"   : {"url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Covid-19.csv"},
+  "title"  : {"text": "Trends in Covid-19 Cases", "anchor": "middle"},
 
-  "vconcat": [{"title"  : {"text": "Trends in Covid-19 Cases", "anchor": "middle"},
-               "width" : 400, "height": 300,
+  "vconcat": [{"width" : 400,
+               "height": 300,
                
                "repeat": {"layer": ["Confirmed", "Deaths", "Recovered", "Active"]},
   
                "spec"  : {"layer": [{"mark"    : {"type": "line"},
                                      "encoding": {"x"    : {"field": "Date", "type": "temporal", "title": null, "axis": {"labels": false}},
-                                                  "y"    : {"field": {"repeat": "layer"}, "type": "quantitative", "title": null},
+                                                  "y"    : {"field": {"repeat": "layer"}, "type": "quantitative", "axis": {"title": "Case Count", "titleAngle": 0, "titlePadding": 50}},
                                                   "color": {"datum": {"repeat": "layer"}, "type": "nominal"}}}]}},
 
-              {"title"  : {"text": "Infection on Number of Countries", "anchor": "middle"},
-               "width"   : 400, "height"  : 300,
+              {"width"   : 400,
+               "height"  : 300,
 
                "mark"    : {"type" : "area",
                             "line" : {"color": "purple"},
                             "color": {"x1": 1, "y1": 1, "x2": 1, "y2": 0, "gradient": "linear", "stops": [{"offset": 0, "color": "white"}, {"offset": 1, "color": "purple"}]}},
 
                "encoding": {"x": {"field": "Date", "type": "temporal", "title": null},
-                            "y": {"field": "Number of countries", "type": "quantitative", "title": null}}}],
+                            "y": {"field": "Number of countries", "type": "quantitative", "axis": {"title": "Number of Countries", "titleAngle": 0, "titlePadding": 80}}}}],
                                   
   "resolve": {"scale": {"x": "shared", "y": "independent"}}
 }
