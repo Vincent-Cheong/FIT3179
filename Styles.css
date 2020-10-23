@@ -12,6 +12,28 @@
 	width: 800px;*/
 }
 
+#isotype_chart {
+	left: 100px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#distribution_area_graph {
+	left: 100px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#hybrid_line_graph {
+	left: 100px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+
 body{
     font-family: 'Source Sans Pro', sans-serif;
 }
