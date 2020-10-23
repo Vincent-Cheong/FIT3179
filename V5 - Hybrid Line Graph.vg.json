@@ -1,11 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  
   "data"   : {"url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Covid-19.csv"},
 
   "vconcat": [{"title"  : {"text": "Trends in Covid-19 Cases", "anchor": "middle"},
-               "width" : 400,
-               "height": 300,
+               "width" : 400, "height": 300,
                
                "repeat": {"layer": ["Confirmed", "Deaths", "Recovered", "Active"]},
   
@@ -15,8 +13,7 @@
                                                   "color": {"datum": {"repeat": "layer"}, "type": "nominal"}}}]}},
 
               {"title"  : {"text": "Infection on Number of Countries", "anchor": "middle"},
-               "width"   : 400,
-               "height"  : 300,
+               "width"   : 400, "height"  : 300,
 
                "mark"    : {"type" : "area",
                             "line" : {"color": "purple"},
