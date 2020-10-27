@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title"  : {"text": "Distribution of Deaths and Recoveries", "anchor": "middle"},
   "width"  : 600,
-  "heigth" : 300,
+  "height" : 300,
   "data"   : {"url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Covid-19.csv"},
   
   "hconcat": [{"mark"     : "area",
