@@ -124,25 +124,25 @@
   </div> <!-- end page -->
    
 <script type="text/javascript">
-  var vis1 = "V1 - Chloropleth Map.vg.json";
-  var vis2 = "V2 - Bubble Plot.vg.json";
-  var vis3 = "V3 - Isotype Chart.vg.json";
-  var vis4 = "V4 - Distribution Area Graph.vg.json";
-  var vis5 = "V5 - Hybrid Line Graph.vg.json";
+  var vis = ["V1 - Chloropleth Map.vg.json",
+             "V2 - Bubble Plot.vg.json",
+             "V3 - Isotype Chart.vg.json",
+             "V4 - Distribution Area Graph.vg.json",
+             "V5 - Hybrid Line Graph.vg.json"]
   
-  vegaEmbed('#chloropleth_map', vis1).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  vegaEmbed('#chloropleth_map', vis[1]).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  vegaEmbed('#bubble_plot', vis2).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  vegaEmbed('#bubble_plot', vis[2]).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  vegaEmbed('#isotype_chart', vis3).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  vegaEmbed('#isotype_chart', vis[3]).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  vegaEmbed('#distribution_area_graph', vis4).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  vegaEmbed('#distribution_area_graph', vis[4]).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  vegaEmbed('#hybrid_line_graph', vis5).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  vegaEmbed('#hybrid_line_graph', vis[5]).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
           
