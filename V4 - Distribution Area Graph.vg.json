@@ -6,17 +6,17 @@
   "data"   : {"url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Covid-19.csv"},
   
   "hconcat": [{"mark"     : "area",
-               "transform": [{"density": "Deaths / 100 Cases"    , "bandwidth": 1, "extent": [0, 35]}],
+               "transform": [{"density": "Deaths / 100 Cases"    , "bandwidth": 1, "extent": [0, 8]}],
                "encoding" : {"x": {"field": "value"  , "type": "quantitative", "title": "Deaths/100 Cases"},
                              "y": {"field": "density", "type": "quantitative", "title": "Density"}}},
 
               {"mark"     : "area",
-               "transform": [{"density": "Recovered / 100 Cases" , "bandwidth": 1, "extent": [0, 110]}],
+               "transform": [{"density": "Recovered / 100 Cases" , "bandwidth": 1, "extent": [0, 3]}],
                "encoding" : {"x": {"field": "value"  , "type": "quantitative", "title": "Recovered/100 Cases"},
                              "y": {"field": "density", "type": "quantitative", "title": null}}},
 
               {"mark"     : "area",
-               "transform": [{"density": "Deaths / 100 Recovered", "bandwidth": 1, "extent": [0, 65]}],
+               "transform": [{"density": "Deaths / 100 Recovered", "bandwidth": 1, "extent": [0, 8]}],
                "encoding" : {"x": {"field": "value"  , "type": "quantitative", "title": "Deaths/100 Recovered"},
                              "y": {"field": "density", "type": "quantitative", "title": null}}}]
 }
