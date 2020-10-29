@@ -9,36 +9,36 @@
                 "encoding": {"x": {"field": "Dates", "type": "temporal", "axis": {"labels": false, "title": null}}},
 
                 "layer"   : [{"encoding": {"color": {"field": "Attribute", "type": "nominal", "title": "Category"},
-                                            "y"   : {"field": "Value", "type": "quantitative", "title": "Count of Cases"}},
+                                           "y"    : {"field": "Value", "type": "quantitative", "title": "Count of Cases"}},
 
                               "layer": [{"mark": "line"},
 
                                         {"transform": [{"filter": {"selection": "hover"}}], "mark": "point"}]},
 
-                                        {"transform" : [{"pivot": "Attribute", "value": "Value", "groupby": ["Dates"]}],
-                                          "mark"     : "rule",
-                                          "encoding" : {"opacity": {"condition": {"value": 0.3, "selection": "hover"}, "value": 0},
-                                          "tooltip"  : [{"field": "Dates", "type": "temporal"}, {"field": "Active"}, {"field": "Confirmed"}, {"field": "Deaths"}, {"field": "Recovered"}]},
-                                          "selection": {"hover": {"type": "single", "fields": ["Dates"], "nearest": true, "on": "mouseover", "empty": "none", "clear": "mouseout"}}}]},
+                                        {"transform": [{"pivot": "Attribute", "value": "Value", "groupby": ["Dates"]}],
+                                         "mark"     : "rule",
+                                         "encoding" : {"opacity": {"condition": {"value": 0.3, "selection": "hover"}, "value": 0},
+                                         "tooltip"  : [{"field": "Dates", "type": "temporal"}, {"field": "Active"}, {"field": "Confirmed"}, {"field": "Deaths"}, {"field": "Recovered"}]},
+                                         "selection": {"hover": {"type": "single", "fields": ["Dates"], "nearest": true, "on": "mouseover", "empty": "none", "clear": "mouseout"}}}]},
 
                {"width": 400,
                 "height": 300,
                 
-                "mark"    : {"type" : "area",
+                "mark"   : {"type" : "area",
                             "line" : {"color": "purple"},
                             "color": {"x1": 1, "y1": 1, "x2": 1, "y2": 0, "gradient": "linear", "stops": [{"offset": 0, "color": "white"}, {"offset": 1, "color": "purple"}]}},
 
-               "encoding": {"x": {"field": "Date", "type": "temporal", "title": null},
-                            "y": {"field": "Number of countries", "type": "quantitative"},
-                            "tooltip"  : [{"field": "Dates", "type": "temporal"}, {"field": "Number of countries", "type": "quantitative"}]}}],
+                "encoding": {"x"      : {"field": "Date", "type": "temporal", "title": null},
+                             "y"      : {"field": "Number of countries", "type": "quantitative"},
+                             "tooltip": [{"field": "Dates", "type": "temporal"}, {"field": "Number of countries", "type": "quantitative"}]}}],
 
-  "resolve": {"scale": {"x": "shared", "y": "independent"}},
+  "resolve" : {"scale": {"x": "shared", "y": "independent"}},
 
-  "config"    : {"axis"  : {"labelFont": "Open Sans", "titleFont": "Open Sans"},
-                 "header": {"labelFont": "Open Sans", "titleFont": "Open Sans"},
-                 "mark"  : {"font": "Open Sans"},
-                 "legend": {"labelFont": "Open Sans", "titleFont": "Open Sans"},
-                 "title" : {"font": "Open Sans"},
-                 "style" : {"cell": {"stroke": "transparent"}},
-                 "text"  : {"align": "center", "fontWeight": "bold", "font": "Open Sans"}}
+  "config"  : {"axis"  : {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+               "header": {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+               "mark"  : {"font": "Open Sans"},
+               "legend": {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+               "title" : {"font": "Open Sans"},
+               "style" : {"cell": {"stroke": "transparent"}},
+               "text"  : {"align": "center", "fontWeight": "bold", "font": "Open Sans"}}
 }
