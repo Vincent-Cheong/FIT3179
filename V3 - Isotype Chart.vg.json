@@ -4,7 +4,6 @@
   "data"     : {"url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Covid-19.csv"},
   "width"    : 800,
   "height"   : 90,
-  "config"   : {"view": {"stroke": "transparent"}},
 
   "transform": [{"filter": "datum['Mean of Confirmed Cases'] != 0"}],
 
@@ -19,5 +18,13 @@
                  "mark"     : {"type": "image", "width": 75, "height": 75},
                  "encoding" : {"y"  : {"field": "Position", "type": "quantitative"},
                                "x"  : {"field": "WHO regions", "type": "nominal"},
-                               "url": {"field": "Image URL", "type": "nominal"}}}]
+                               "url": {"field": "Image URL", "type": "nominal"}}}],
+                               
+  "config"    : {"axis"  : {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+                 "header": {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+                 "mark"  : {"font": "Open Sans"},
+                 "legend": {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+                 "title" : {"font": "Open Sans"},
+                 "style" : {"cell": {"stroke": "transparent"}},
+                 "text"  : {"align": "center", "fontWeight": "bold", "font": "Open Sans"}}
 }
