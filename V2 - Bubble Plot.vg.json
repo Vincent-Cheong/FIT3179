@@ -4,7 +4,7 @@
   "height"   : 500,
   "title"    : "Death and Recovered COVID-19 Cases per Country",
   "data"     : {"url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Covid-19.csv"},
-
+  
   "params"   : [{"name" : "Continent_selection",
                  
                  "bind" : {"input"  : "select",
@@ -21,10 +21,13 @@
                 {"filter": "Continent_selection == null || datum['WHO Region'] == Continent_selection"},
                 {"calculate": "datum['Confirmed Cases'] / datum['Population'] * 10000", "as": "Cases per 10000 Population"}],
 
+  
+
   "encoding" : {"x": {"field": "Death Cases", "type": "quantitative", "axis": {"tickCount": 7}, "scale": {"type": "log", "domain": [1, 10000000]}},
                 "y": {"field": "Recovered Cases", "type": "quantitative", "axis": {"tickCount": 6}, "scale": {"type": "log", "domain": [1, 10000000]}}},
   
-  "layer"    : [{"selection": {"continent_highlight": {"type": "multi", "fields": ["WHO Region"], "bind": "legend"}},
+  "layer"    : [{"selection": {"cnt_highlight": {"type": "multi", "fields": ["WHO Region"], "bind": "legend"},
+                               "grid": {"type": "interval", "bind": "scales"}},
 
                  "mark"     : "circle",
 
@@ -38,7 +41,7 @@
                                          "scale": {"domain": ["Africa", "Americas", "Eastern Mediterranean", "Europe", "South-East Asia", "Western Pacific"],
                                                    "range" : ["#e41a1c", "#984ea3", "#ff7f00", "#30d5c8", "#377eb8", "#a65628"]}},
 
-                               "opacity"  : {"condition": {"selection": "continent_highlight", "value": 0.6}, "value": 0.2},
+                               "opacity"  : {"condition": {"selection": "cnt_highlight", "value": 0.6}, "value": 0.2},
                 
                                "tooltip"  : [{"field": "Country" , "type": "nominal"},
                                              {"field": "Confirmed Cases", "type": "quantitative", "format": ","},
