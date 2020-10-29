@@ -18,7 +18,11 @@
   
   "mark"      : {"type": "geoshape", "strokeWidth": 0.4, "stroke": "#000d83"},
 
-  "encoding"  : {"color"  : {"field": "Confirmed Cases", "type": "quantitative", "scale": {"type": "log"}, "condition": [{"selection": "highlight", "value": "white"}]},
+  "encoding"  : {"color"  : {"field"    : "Confirmed Cases",
+                             "type"     : "quantitative",
+                             "scale"    : {"type": "log", "range": ["rgba(242, 255, 0, 1)", "rgba(253, 113, 29, 0.7)", "rgba(252, 69, 69, 1)"]},
+                             "condition": [{"selection": "highlight", "value": "white"}]},
+                 
                  "tooltip": [{"field": "properties.NAME", "type": "nominal", "title": "Country"}, {"field": "Confirmed Cases", "type": "quantitative"}]},
 
   "config"    : {"axis"  : {"labelFont": "Open Sans", "titleFont": "Open Sans"},
