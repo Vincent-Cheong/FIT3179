@@ -166,19 +166,19 @@
              "V4 - Distribution Area Graph.vg.json",
              "V5 - Hybrid Line Graph.vg.json"]
   
-  vegaEmbed('#choropleth_map', vis[0]).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  vegaEmbed('#choropleth_map', vis[0], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  vegaEmbed('#bubble_plot', vis[1]).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  vegaEmbed('#bubble_plot', vis[1], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  vegaEmbed('#isotype_chart', vis[2]).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  vegaEmbed('#isotype_chart', vis[2], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  vegaEmbed('#distribution_area_graph', vis[3]).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  vegaEmbed('#distribution_area_graph', vis[3], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  vegaEmbed('#hybrid_line_graph', vis[4]).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  vegaEmbed('#hybrid_line_graph', vis[4], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
           
