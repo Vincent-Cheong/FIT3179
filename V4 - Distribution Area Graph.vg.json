@@ -5,24 +5,32 @@
   "height" : 525,
   "data"   : {"url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Covid-19.csv"},
   
-  "hconcat": [{"width": 275,
+  "hconcat": [{"width": 250,
                "height": 275,
                "mark"     : "area",
                "transform": [{"density": "Deaths / 100 Cases"    , "bandwidth": 1, "extent": [0, 8]}],
                "encoding" : {"x": {"field": "value"  , "type": "quantitative", "title": "Deaths/100 Cases"},
                              "y": {"field": "density", "type": "quantitative", "title": "Density"}}},
 
-              {"width": 275,
+              {"width": 250,
                "height": 275,
                "mark"     : "area",
                "transform": [{"density": "Recovered / 100 Cases" , "bandwidth": 1, "extent": [0, 3]}],
                "encoding" : {"x": {"field": "value"  , "type": "quantitative", "title": "Recovered/100 Cases"},
                              "y": {"field": "density", "type": "quantitative", "title": null}}},
 
-              {"width": 275,
+              {"width": 250,
                "height": 275,
                "mark"     : "area",
                "transform": [{"density": "Deaths / 100 Recovered", "bandwidth": 1, "extent": [0, 8]}],
                "encoding" : {"x": {"field": "value"  , "type": "quantitative", "title": "Deaths/100 Recovered"},
-                             "y": {"field": "density", "type": "quantitative", "title": null}}}]
+                             "y": {"field": "density", "type": "quantitative", "title": null}}}],
+
+  "config"    : {"axis"  : {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+                 "header": {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+                 "mark"  : {"font": "Open Sans"},
+                 "legend": {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+                 "title" : {"font": "Open Sans"},
+                 "style" : {"cell": {"stroke": "transparent"}},
+                 "text"  : {"align": "center", "fontWeight": "bold", "font": "Open Sans"}}
 }
