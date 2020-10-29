@@ -24,9 +24,9 @@
                {"width": 400,
                 "height": 300,
                 
-                "mark"   : {"type" : "area",
-                            "line" : {"color": "purple"},
-                            "color": {"x1": 1, "y1": 1, "x2": 1, "y2": 0, "gradient": "linear", "stops": [{"offset": 0, "color": "white"}, {"offset": 1, "color": "purple"}]}},
+                "mark"    : {"type" : "area",
+                             "line" : {"color": "purple"},
+                             "color": {"x1": 1, "y1": 1, "x2": 1, "y2": 0, "gradient": "linear", "stops": [{"offset": 0, "color": "white"}, {"offset": 1, "color": "purple"}]}},
 
                 "encoding": {"x"      : {"field": "Date", "type": "temporal", "title": null},
                              "y"      : {"field": "Number of countries", "type": "quantitative"},
