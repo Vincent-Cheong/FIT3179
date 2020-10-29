@@ -6,7 +6,7 @@
   "vconcat" : [{"width": 400,
                 "height": 300,
                 
-                "encoding": {"x": {"field": "Dates", "type": "temporal", "axis": null}},
+                "encoding": {"x": {"field": "Dates", "type": "temporal", "axis": {"labels": false, "title": null}}},
 
                 "layer"   : [{"encoding": {"color": {"field": "Attribute", "type": "nominal", "title": "Category"},
                                             "y"   : {"field": "Value", "type": "quantitative", "title": "Count of Cases"}},
@@ -32,5 +32,13 @@
                             "y": {"field": "Number of countries", "type": "quantitative"},
                             "tooltip"  : [{"field": "Dates", "type": "temporal"}, {"field": "Number of countries", "type": "quantitative"}]}}],
 
-  "resolve": {"scale": {"x": "shared", "y": "independent"}}
+  "resolve": {"scale": {"x": "shared", "y": "independent"}},
+
+  "config"    : {"axis"  : {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+                 "header": {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+                 "mark"  : {"font": "Open Sans"},
+                 "legend": {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+                 "title" : {"font": "Open Sans"},
+                 "style" : {"cell": {"stroke": "transparent"}},
+                 "text"  : {"align": "center", "fontWeight": "bold", "font": "Open Sans"}}
 }
