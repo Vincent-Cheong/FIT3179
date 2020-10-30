@@ -3,6 +3,7 @@
   "title"  : {"text": "Distribution of Deaths and Recoveries", "anchor": "middle"},
   "width"  : 725,
   "height" : 525,
+  "background": null,
   "data"   : {"url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Covid-19.csv"},
   
   "hconcat": [{"width": 250,
