@@ -4,6 +4,7 @@
   "data"     : {"url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Covid-19.csv"},
   "width"    : 825,
   "height"   : 100,
+  "background": null,
 
   "transform": [{"filter": "datum['Mean of Confirmed Cases'] != 0"}],
 
