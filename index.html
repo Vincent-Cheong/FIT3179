@@ -15,7 +15,7 @@
           integrity = "sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" 
           crossorigin = "anonymous">
   
-    <meta name =  "viewport"
+    <meta name = "viewport"
           content = "width = device-width, initial-scale = 1">
   
     <!-- Google font -->
@@ -24,18 +24,16 @@
 
     <!-- custom style -->
     <style>
-        * {font-family: 'Open Sans'; text-align: justify;}
+        * {font-family: 'Open Sans'; text-align: justify}
         h1 {font-size: 40px; font-weight: 600; text-align: center; font-weight: 600; padding: 50px; background: linear-gradient(90deg, rgba(242, 255, 0, 0.6) 0%, rgba(253, 113, 29, 0.5) 50%, rgba(252, 69, 69, 0.7) 100%);}
         h2 {font-size: 20px; font-weight: 600; width: 40%; padding: 15px; background: linear-gradient(90deg, rgba(242, 255, 0, 0.6) 0%, rgba(253, 113, 29, 0.5) 50%, rgba(252, 69, 69, 0.7) 100%);}
-        body {background: linear-gradient(90deg, rgba(242, 255, 0, 0.6) 0%, rgba(253, 113, 29, 0.5) 50%, rgba(252, 69, 69, 0.7) 100%);}
-        .page {width: 950px; background-color: white; margin: auto; padding: 50px; padding-top: 35px;}
+        body {background: linear-gradient(90deg, rgba(252, 69, 69, 0.7) 0%, rgba(253, 113, 29, 0.5) 50%, rgba(242, 255, 0, 0.6) 100%);}
+        .page {width: 950px; background-color: ; margin: auto; padding: 50px; padding-top: 35px;}
+        .vline {border-left: 8px solid black; height: 125px; position: relative}
         .vis-container {width: 100%; text-align: center}
         .vis-container2 {width: 100%; text-align: center; left: 4%}
-        .description h2, h1 {margin-top: 0px;}
-        .description-right {padding-left: 0px;}
-        .description-left {padding-right: 0px;}
-        .text1 {padding-left: 18px}
-        .text2 {text-transform: uppercase; color: #aaa; border-bottom: 1px solid #eee; padding: 0.4em 0; font-size: 80%; font-weight: 500; letter-spacing: 0.1em;}
+        .text1 {padding-left: 16px}
+        .text2 {text-transform: uppercase; color: black; padding: 0.4em 0; font-size: 75%; letter-spacing: 0.1em;}
         .pure-g {margin-bottom: 25px;}
         .img_class_1 {position: relative; top: 15%; left: 8%}
         .img_class_2 {position: relative; top: 15%; right: 8%}
@@ -54,17 +52,21 @@
                 <div class = "img_class_2">
                     <img src = "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Images/Image%202.png" style = "float:right; width: 100px; height: 100px;">
                 </div>
-                <h1 style = "">Worldwide Covid-19 Cases</h1>
+                <h1>Worldwide Covid-19 Cases</h1>
             </div>
         </div>
         
         <!-- Introduction -->
-        <br>
-        <div class = "text2">
-            <p>Introduction</p>
-            <p>The coronavirus was first detected in Wuhan, China in Decemebr 2019.</p>
-            <p>map below gives a good overall view of the virus outbreak.</p>
+        <div class = "vline">
+            <div style = "position: relative; left: 2%" class = "text2">
+                <p><b>Introduction</b></p>
+                <p><b>•</b>&nbsp;&nbsp;&nbsp;The coronavirus was first detected in Wuhan, China in Decemebr 2019.</p>
+                <p><b>•</b>&nbsp;&nbsp;&nbsp;It is a RNA viruses that causes diseases in mammals and birds.</p>
+                <p><b>•</b>&nbsp;&nbsp;&nbsp;Common symptoms include fever, cough, fatigue, breathing difficulties, and loss of smell and taste.</p>
+            </div>
         </div>
+        <br>
+        <br>
         <br>
    
         <!-- Choropleth Map -->
