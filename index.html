@@ -1,187 +1,187 @@
 <!DOCTYPE html>
 <html>
+    
 <head>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src = "https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
   
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src = "https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src = "https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+    <!-- Import vega-embed -->
+    <script src = "https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
   
-  <!-- Import vega-embed -->
-  <script src = "https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <!-- Import pure.css -->
+    <link rel = "stylesheet"
+          href = "https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+          integrity = "sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" 
+          crossorigin = "anonymous">
   
-  <!-- Import pure.css -->
-  <link rel = "stylesheet"
-        href = "https://unpkg.com/purecss@2.0.3/build/pure-min.css"
-        integrity = "sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" 
-        crossorigin = "anonymous">
+    <meta name =  "viewport"
+          content = "width = device-width, initial-scale = 1">
   
-  <meta name =  "viewport"
-        content = "width = device-width, initial-scale = 1">
-  
-  <!-- Google font -->
-  <link href = "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" 
-        rel = "stylesheet">
+    <!-- Google font -->
+    <link href = "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" 
+          rel = "stylesheet">
 
-  <!-- custom style -->
-  <style>
-    * {font-family: 'Open Sans'; text-align: justify;}
-    h1 {text-align: center; font-weight: 900; padding: 40px; background: linear-gradient(90deg, rgba(242, 255, 0, 0.6) 0%, rgba(253, 113, 29, 0.5) 50%, rgba(252, 69, 69, 0.7) 100%);}
-    body {background: linear-gradient(90deg, rgba(242, 255, 0, 0.6) 0%, rgba(253, 113, 29, 0.5) 50%, rgba(252, 69, 69, 0.7) 100%);}
-    .page {width: 950px; background-color: white; margin: auto; padding: 50px; padding-top: 35px;}
-    .vis-container {width: 100%; text-align: center}
-    .vis-container2 {width: 100%; text-align: center; left: 4%}
-    .description h2, h1 {margin-top: 0px;}
-    .description-right {padding-left: 20px;}
-    .description-left {padding-right: 20px;}
-    .pure-g {margin-bottom: 25px;}
-    .small-font {font-size: 14px;}
-    .img_class_1 {position: relative; top: 10%; left: 8%}
-    .img_class_2 {position: relative; top: 10%; right: 8%}
-  </style>
+    <!-- custom style -->
+    <style>
+        * {font-family: 'Open Sans'; text-align: justify;}
+        h1 {text-align: center; font-weight: 600; padding: 50px; background: linear-gradient(90deg, rgba(242, 255, 0, 0.6) 0%, rgba(253, 113, 29, 0.5) 50%, rgba(252, 69, 69, 0.7) 100%);}
+        h2 {width: 50%; padding: 20px; background: linear-gradient(90deg, rgba(242, 255, 0, 0.6) 0%, rgba(253, 113, 29, 0.5) 50%, rgba(252, 69, 69, 0.7) 100%);}
+        body {background: linear-gradient(90deg, rgba(242, 255, 0, 0.6) 0%, rgba(253, 113, 29, 0.5) 50%, rgba(252, 69, 69, 0.7) 100%);}
+        .page {width: 950px; background-color: white; margin: auto; padding: 50px; padding-top: 35px;}
+        .vis-container {width: 100%; text-align: center}
+        .vis-container2 {width: 100%; text-align: center; left: 4%}
+        .description h2, h1 {margin-top: 0px;}
+        .description-right {padding-left: 0px;}
+        .description-left {padding-right: 0px;}
+        .text1 {padding-left: 20px}
+        .pure-g {margin-bottom: 25px;}
+        .img_class_1 {position: relative; top: 15%; left: 8%}
+        .img_class_2 {position: relative; top: 15%; right: 8%}
+    </style>
 </head>
   
 <body>
+    <div class = "page">
+        
+        <!-- Header -->
+        <div class = "pure-g">
+            <div class = "pure-u-1-1">
+                <div class = "img_class_1">
+                    <img src = "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Images/Image%201.png" style = "float:left; width: 100px; height: 100px;">
+                </div>
+            <div class = "img_class_2">
+                <img src = "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Images/Image%202.png" style = "float:right; width: 100px; height: 100px;">
+            </div>
+            <h1 style = "font-size: 40px; font-weight: 600">Worldwide Covid-19 Cases</h1>
+            </div>
+        </div>
 
- <div class="page">
+   
+        <!-- Choropleth Map -->
+        <div class = "pure-g">
+            <div class = "pure-u-1-1">
+                <h2 style="font-size: 26px; font-weight: 600;">How does the world look now?</h2>
+                <div class = "text1">
+                    <p>The choropleth map below gives a good overall view of the virus outbreak.</p>
+                    <br>
+                    <br>
+                </div>
+                <div class = "pure-u-1-1">
+                    <div id = "choropleth_map" class = "vis-container"></div>
+                    <p>Note: hover to the country for more details</p>
+                    <p><b>America</b> is the <b>top</b> for number of <b>confirmed cases.</b> Many other countries suffer more than thousands of cases. Few countries have very few number of cases. For example, <b>Greenland</b> has the <b>least cases</b>. Perhaps, the cold weather there has connection to it.</p>
+                </div>
+            </div>
+        </div>
 
-   <!-- Header -->
-    <div class = "pure-g">
-      <div class = "pure-u-1-1">
-        <div class = "img_class_1">
-          <img src = "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Images/Image%201.png" style = "float:left; width: 100px; height: 100px;">
+        <br>
+   
+        <!-- Bubble Plot -->
+        <div class = "pure-g">
+            <div class = "pure-u-1-1">
+                <p style="font-size: 26px; font-weight: 600;">Each on its own.</p>
+                <p>The bubble plot below provides a good interface to see the countries' deaths and recoveries by region and/or population.</p>
+                <br>
+                <br>
+            </div>
+            <div class = "pure-u-1-1">
+                <div class = "text1">
+                <div id = "bubble_plot" class = "vis-container"></div>
+                </div>
+                <p>Note: - zoom in to enlarge smaller dots<br>      - drag around to pan the map<br>      - click on the legend entries for highlighting</p>
+                <br>
+                <p>African countries are clustered more closely and have lower recoveries and deaths compared to others. The Americas have more countries with higher death-recovery ratios. The rest of the continents average around 1k deaths and 10k recoveries. With decreased social gatherings and more precautions taken, hopefully the countries can stay in higher positions in recoveries (nearer to the top) and lower positions in deaths (nearer to the left).</p>
+            </div>
         </div>
-        <div class = "img_class_2">
-          <img src = "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Images/Image%202.png" style = "float:right; width: 100px; height: 100px;">
-        </div>
-        <h1 style = "font-size: 40px; font-weight: 600">Worldwide Covid-19 Cases</h1>
-      </div>
-    </div>
 
+        <br>
    
-    <!-- Choropleth Map -->
-    <div class = "pure-g">
-        <div class = "pure-u-1-1">
-          <div class = "description description-left">
-            <p style="font-size: 26px; font-weight: 600;">How does the world look now?</p>
-            <p>The choropleth map below gives a good overall view of the virus outbreak.</p>
-            <br>
-            <br>
-          </div>
+        <!-- Isotype Chart -->
+        <div class = "pure-g">
+            <div class = "pure-u-1-1">
+                <p style="font-size: 26px; font-weight: 600;">Greet thy neighbours.</p>
+                <p>The isotype chart next gives a clear picture on mean cases by WHO region.</p>
+                <br>
+                <br>
+            </div>
+            <div class = "pure-u-1-1">
+                <div class = "text1">
+                    <div id = "isotype_chart"  class = "vis-container"></div>
+                </div>
+                <br>
+                <br>
+                <p>The Americas sustained most cases as a whole but is also due to America's cases skewing the reading up, despite having better healthcare policies. The African region notably has lowest average case - the continent of a billion people had fewer deaths than most other countries despite generally fragile health systems. Other regions have a reasonable number of average cases. While some countries are wealthier or equipped with better healthcare, overall the figures are within the expected range.</p>
+            </div>
         </div>
-        <div class = "pure-u-1-1">
-          <div id = "choropleth_map" class = "vis-container"></div>
-          <p>Note: hover to the country for more details</p>
-          <p><b>America</b> is the <b>top</b> for number of <b>confirmed cases.</b> Many other countries suffer more than thousands of cases. Few countries have very few number of cases. For example, <b>Greenland</b> has the <b>least cases</b>. Perhaps, the cold weather there has connection to it.</p>
+        
+        <br>
+        
+        <!-- Hybrid Line Graph -->
+        <div class = "pure-g">
+            <div class = "pure-u-1-1">
+                <p style = "font-size: 26px; font-weight: 600;">Day by day.</p>
+            </div>
+            <div class = "pure-u-1-3">
+                <div class = "text1">
+                    <p>The line graph on the right is divided into two parts: one for categoric cases and the other for number of countries.</p>
+                    <p>Note: hover around for more details</p>
+                    <br>
+                    <p>The graph of categoric cases may seem out of shape or skewed but it is a clear picture of how the outbreak escalated. Up until 20th March, the line seems to be very low because the rise in cases was steady.</p>
+                    <p>Subsequently, the line graph increases exponentially because the outbreak quickly spread to many more people in such a short time. While deaths and active cases rose setadily, recoveries went up higher mostly due to precautions taken and intensive medical assistance.</p>
+                    <br>
+                    <p>We can see that the number of countries infected were small up until around March. Most of the countries became infected from there onwards.</p>
+                    <p>Many countries contracted the virus because of air, ground, and sea travels which were too late to stop in the early stages. However, with more awareness and decreased outdoor activities, deaths and active cases were kept on a slow increase.</p>
+                </div>
+            </div>
+            <div class = "pure-u-2-3">
+                <div id = "hybrid_line_graph" class = "vis-container2"></div>
+            </div>
         </div>
+        
+        <br>
+        
+        <!-- Distribution Area Graph -->
+        <div class = "pure-g">
+            <div class = "pure-u-1-1">
+                <p style="font-size: 26px; font-weight: 600;">The story so far...</p>
+                <div class = "text1">
+                    <p>The area graphs below show the distribution of deaths and recoveries.</p>
+                    <br>
+                    <br>
+                    <div class = "pure-u-1-1">
+                        <div id = "distribution_area_graph" class = "vis-container"></div>
+                    </div>
+                    <br>
+                    <br>
+                    <p>Compared to recoveries, a smaller area covered in the graph of deaths per 100 cases is good news. The area for deaths per 100 recoveries is almost the same as the deaths per 100 cases. This shows that the recoveries is almost as many as the number of confirmed cases. Hopefully, with sustained precaution, we may be able to further control the outbreak of this virus.</p>
+                </div>
+            </div>
+        </div>
+        
     </div>
-   
-   <br>
-   
-    <!-- Bubble Plot -->
-    <div class = "pure-g">
-        <div class = "pure-u-1-1">
-          <p style="font-size: 26px; font-weight: 600;">Each on its own.</p>
-          <p>The bubble plot below provides a good interface to see the countries' deaths and recoveries by region and/or population.</p>
-          <br>
-          <br>
-        </div>
-        <div class = "pure-u-1-1">
-          <div class="description description-right">
-            <div id = "bubble_plot"  class = "vis-container"></div>
-          </div>
-          <br>
-          <p>Note: - zoom in to enlarge smaller dots<br></br>      - drag around to pan the map<br></br>      - click on the legend entries for highlighting</p>
-          <br>
-          <p>African countries are clustered more closely and have lower recoveries and deaths compared to others. The Americas have more countries with higher death-recovery ratios. The rest of the continents average around 1k deaths and 10k recoveries. With decreased social gatherings and more precautions taken, hopefully the countries can stay in higher positions in recoveries (nearer to the top) and lower positions in deaths (nearer to the left).</p>
-        </div>
-    </div>
-   
-   <br>
-   
-    <!-- Isotype Chart -->
-    <div class = "pure-g">
-        <div class = "pure-u-1-1">
-          <p style="font-size: 26px; font-weight: 600;">Greet thy neighbours.</p>
-          <p>The isotype chart next gives a clear picture on mean cases by WHO region.</p>
-          <br>
-          <br>
-        </div>
-        <div class = "pure-u-1-1">
-          <div class = "description description-right">
-            <div id = "isotype_chart"  class = "vis-container"></div>
-          </div>
-          <br>
-          <br>
-          <p>The Americas sustained most cases as a whole but is also due to <b>America's cases<b> skewing the reading up, <b>despite better healthcare<b> policies. The African region notably has lowest average case - the continent of a <b>billion people<b> had <b>fewer deaths<b> than most other countries <b>despite generally fragile health<b> systems. Other regions have a reasonable number of average cases. While some countries are wealthier or equipped with better healthcare, overall the figures are within the expected range.</p>
-        </div>
-    </div>
-   
-   <br>
-
-    <!-- Hybrid Line Graph -->
-    <div class = "pure-g">
-      <div class = "pure-u-1-1">
-        <p style="font-size: 26px; font-weight: 600;">Day by day.</p>
-      </div>
-      <div class = "pure-u-1-3">
-        <div class = "description description-left">
-          <p>The line graph on the right is divided into two parts: one for categoric cases and the other for number of countries.</p>
-          <p>Note: hover around for more details</p>
-          <br>
-          <p>The graph of categoric cases may seem out of shape or skewed but it is a clear picture of how the outbreak escalated. Up until 20th March, the line seems to be very low because the rise in cases was steady.</p>
-          <p>Subsequently, the line graph increases exponentially because the outbreak quickly spread to many more people in such a short time. While deaths and active cases rose setadily, recoveries went up higher mostly due to precautions taken and intensive medical assistance.</p>
-          <p>We can see that the number of countries infected were small up until around March. Most of the countries became infected from there onwards.</p>
-          <p>Many countries contracted the virus because of air, ground, and sea travels which were too late to stop in the early stages. However, with more awareness and decreased outdoor activities, deaths and active cases were kept on a slow increase.</p>
-        </div>
-      </div>
-      <div class = "pure-u-2-3">
-        <div id = "hybrid_line_graph" class = "vis-container2"></div>
-      </div>
-    </div>
-   
-   <br>
-  
-    <!-- Distribution Area Graph -->
-    <div class = "pure-g">
-        <div class = "pure-u-1-1">
-          <div class = "description description-down">
-            <p style="font-size: 26px; font-weight: 600;">The story so far...</p>
-            <p>The area graphs below show the distribution of deaths and recoveries.</p>
-            <br>
-            <br>
-          </div>
-        </div>
-        <div class = "pure-u-1-1">
-          <div id = "distribution_area_graph" class = "vis-container"></div>
-          <br>
-          <br>
-          <p>Compared to recoveries, a smaller area covered in the graph of deaths per 100 cases is good news. The area for deaths per 100 recoveries is almost the same as the deaths per 100 cases. This shows that the recoveries is almost as many as the number of confirmed cases. Hopefully, with sustained precaution, we may be able to further control the outbreak of this virus.</p>
-        </div>
-    </div>
-          
-  </div> 
    
 <script type = "text/javascript">
-  var vis = ["V1 - Choropleth Map.vg.json",
-             "V2 - Bubble Plot.vg.json",
-             "V3 - Isotype Chart.vg.json",
-             "V4 - Distribution Area Graph.vg.json",
-             "V5 - Hybrid Line Graph.vg.json"]
+    var vis = ["V1 - Choropleth Map.vg.json",
+               "V2 - Bubble Plot.vg.json",
+               "V3 - Isotype Chart.vg.json",
+               "V4 - Distribution Area Graph.vg.json",
+               "V5 - Hybrid Line Graph.vg.json"]
   
-  vegaEmbed('#choropleth_map', vis[0], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
+    vegaEmbed('#choropleth_map', vis[0], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    
+    vegaEmbed('#bubble_plot', vis[1], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
   
-  vegaEmbed('#bubble_plot', vis[1], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
+    vegaEmbed('#isotype_chart', vis[2], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
   
-  vegaEmbed('#isotype_chart', vis[2], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
+    vegaEmbed('#distribution_area_graph', vis[3], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
   
-  vegaEmbed('#distribution_area_graph', vis[3], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-  vegaEmbed('#hybrid_line_graph', vis[4], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
+    vegaEmbed('#hybrid_line_graph', vis[4], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
 </script>
-          
+        
 </body>
