@@ -10,7 +10,7 @@
 
   "transform" : [{"lookup": "properties.NAME",
                   "from"  : {"data": {"url": "https://raw.githubusercontent.com/Vincent-Cheong/FIT3179/main/Covid-19.csv"},
-                             "key" : "Country", "fields": ["Confirmed Cases"]}}],
+                             "key" : "Country", "fields": ["Confirmed Cases", "Population"]}}],
 
   "selection" : {"country"  : {"type": "multi", "fields": ["Country"], "on": "click", "resolve": "global", "empty": "none"},
                  "highlight": {"type": "single", "empty": "none", "on": "mouseover"}},
@@ -24,7 +24,9 @@
                              "scale"    : {"type": "log", "range": ["rgba(242, 255, 0, 1)", "rgba(253, 113, 29, 0.7)", "rgba(252, 69, 69, 1)"]},
                              "condition": [{"selection": "highlight", "value": "white"}]},
                  
-                 "tooltip": [{"field": "properties.NAME", "type": "nominal", "title": "Country"}, {"field": "Confirmed Cases", "type": "quantitative"}]},
+                 "tooltip": [{"field": "properties.NAME", "type": "nominal", "title": "Country"},
+                             {"field": "Confirmed Cases", "type": "quantitative"},
+                             {"field": "Population", "type": "quantitative"}]},
 
   "config"    : {"axis"  : {"labelFont": "Open Sans", "titleFont": "Open Sans"},
                  "header": {"labelFont": "Open Sans", "titleFont": "Open Sans"},
